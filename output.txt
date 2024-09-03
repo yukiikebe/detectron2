@@ -1,0 +1,51 @@
+Distribution of instances among all 36 categories:
+|   category    | #instances   |   category    | #instances   |   category    | #instances   |
+|:-------------:|:-------------|:-------------:|:-------------|:-------------:|:-------------|
+|  right lung   | 166431       | right upper.. | 166259       | right mid l.. | 162889       |
+| right lower.. | 162983       | right hilar.. | 162883       | right apica.. | 162836       |
+| right costo.. | 166137       | right cardi.. | 166001       | right hemid.. | 166172       |
+|   left lung   | 166460       | left upper .. | 166226       | left mid lu.. | 162146       |
+| left lower .. | 162582       | left hilar .. | 162170       | left apical.. | 162386       |
+| left costop.. | 165875       | left hemidi.. | 166237       |    trachea    | 166280       |
+|     spine     | 166281       | right clavi.. | 165587       | left clavicle | 165442       |
+|  aortic arch  | 164718       |  mediastinum  | 166456       | upper media.. | 166260       |
+|      svc      | 165755       | cardiac sil.. | 166490       | left cardia.. | 166272       |
+| right cardi.. | 166214       | cavoatrial .. | 166096       | right atrium  | 166253       |
+| descending .. | 165705       |    carina     | 165188       | left upper .. | 166263       |
+| right upper.. | 166276       |    abdomen    | 166276       | left cardio.. | 165753       |
+|               |              |               |              |               |              |
+|     total     | 5950238      |               |              |               |              |
+[09/03 03:59:00 d2.data.dataset_mapper]: [DatasetMapper] Augmentations used in training: [ResizeShortestEdge(short_edge_length=(640, 672, 704, 736, 768, 800), max_size=1333, sample_style='choice'), RandomFlip()]
+[09/03 03:59:00 d2.data.build]: Using training sampler TrainingSampler
+[09/03 03:59:00 d2.data.common]: Serializing the dataset using: <class 'detectron2.data.common._TorchSerializedList'>
+[09/03 03:59:00 d2.data.common]: Serializing 166504 elements to byte tensors and concatenating them all ...
+[09/03 03:59:04 d2.data.common]: Serialized dataset takes 405.24 MiB
+[09/03 03:59:04 d2.data.build]: Making batched data loader with batch_size=2
+[09/03 03:59:04 d2.checkpoint.detection_checkpoint]: [DetectionCheckpointer] Loading from https://dl.fbaipublicfiles.com/detectron2/COCO-Detection/faster_rcnn_R_50_C4_1x/137257644/model_final_721ade.pkl ...
+Skip loading parameter 'roi_heads.box_predictor.cls_score.weight' to the model due to incompatible shapes: (81, 2048) in the checkpoint but (36, 2048) in the model! You might want to double check if this is expected.
+Skip loading parameter 'roi_heads.box_predictor.cls_score.bias' to the model due to incompatible shapes: (81,) in the checkpoint but (36,) in the model! You might want to double check if this is expected.
+Skip loading parameter 'roi_heads.box_predictor.bbox_pred.weight' to the model due to incompatible shapes: (320, 2048) in the checkpoint but (140, 2048) in the model! You might want to double check if this is expected.
+Skip loading parameter 'roi_heads.box_predictor.bbox_pred.bias' to the model due to incompatible shapes: (320,) in the checkpoint but (140,) in the model! You might want to double check if this is expected.
+Some model parameters or buffers are not found in the checkpoint:
+roi_heads.box_predictor.bbox_pred.{bias, weight}
+roi_heads.box_predictor.cls_score.{bias, weight}
+[09/03 03:59:04 d2.engine.train_loop]: Starting training from iteration 0
+/home/appuser/.local/lib/python3.11/site-packages/torch/functional.py:513: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3609.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+[09/03 03:59:11 d2.utils.events]:  eta: 0:01:12  iter: 19  total_loss: 6.478  loss_cls: 3.761  loss_box_reg: 0.8814  loss_rpn_cls: 1.418  loss_rpn_loc: 0.394    time: 0.2725  last_time: 0.3071  data_time: 0.0732  last_data_time: 0.0802   lr: 1.6068e-05  max_mem: 1872M
+[09/03 03:59:16 d2.utils.events]:  eta: 0:01:07  iter: 39  total_loss: 5.612  loss_cls: 3.312  loss_box_reg: 0.9066  loss_rpn_cls: 1.015  loss_rpn_loc: 0.3783    time: 0.2718  last_time: 0.2156  data_time: 0.0422  last_data_time: 0.0025   lr: 3.2718e-05  max_mem: 1873M
+[09/03 03:59:21 d2.utils.events]:  eta: 0:01:01  iter: 59  total_loss: 4.21  loss_cls: 2.307  loss_box_reg: 0.8969  loss_rpn_cls: 0.6052  loss_rpn_loc: 0.3392    time: 0.2652  last_time: 0.2546  data_time: 0.0293  last_data_time: 0.0479   lr: 4.9367e-05  max_mem: 1873M
+[09/03 03:59:27 d2.utils.events]:  eta: 0:00:57  iter: 79  total_loss: 3.214  loss_cls: 1.505  loss_box_reg: 0.9511  loss_rpn_cls: 0.3903  loss_rpn_loc: 0.3131    time: 0.2704  last_time: 0.2430  data_time: 0.0668  last_data_time: 0.0263   lr: 6.6017e-05  max_mem: 1880M
+[09/03 03:59:32 d2.utils.events]:  eta: 0:00:51  iter: 99  total_loss: 3.096  loss_cls: 1.447  loss_box_reg: 0.9305  loss_rpn_cls: 0.3613  loss_rpn_loc: 0.3294    time: 0.2667  last_time: 0.2392  data_time: 0.0299  last_data_time: 0.0061   lr: 8.2668e-05  max_mem: 1880M
+[09/03 03:59:37 d2.utils.events]:  eta: 0:00:45  iter: 119  total_loss: 2.978  loss_cls: 1.417  loss_box_reg: 0.9517  loss_rpn_cls: 0.3106  loss_rpn_loc: 0.3036    time: 0.2676  last_time: 0.2315  data_time: 0.0403  last_data_time: 0.0018   lr: 9.9318e-05  max_mem: 1886M
+[09/03 03:59:43 d2.utils.events]:  eta: 0:00:41  iter: 139  total_loss: 2.962  loss_cls: 1.383  loss_box_reg: 0.9389  loss_rpn_cls: 0.305  loss_rpn_loc: 0.3089    time: 0.2689  last_time: 0.2999  data_time: 0.0505  last_data_time: 0.0541   lr: 0.00011597  max_mem: 1886M
+[09/03 03:59:48 d2.utils.events]:  eta: 0:00:35  iter: 159  total_loss: 2.967  loss_cls: 1.376  loss_box_reg: 0.9413  loss_rpn_cls: 0.2983  loss_rpn_loc: 0.3121    time: 0.2691  last_time: 0.3650  data_time: 0.0459  last_data_time: 0.1416   lr: 0.00013262  max_mem: 1915M
+[09/03 03:59:54 d2.utils.events]:  eta: 0:00:30  iter: 179  total_loss: 2.896  loss_cls: 1.384  loss_box_reg: 0.9082  loss_rpn_cls: 0.3224  loss_rpn_loc: 0.3056    time: 0.2695  last_time: 0.4078  data_time: 0.0407  last_data_time: 0.1731   lr: 0.00014927  max_mem: 1915M
+[09/03 03:59:59 d2.utils.events]:  eta: 0:00:25  iter: 199  total_loss: 2.894  loss_cls: 1.371  loss_box_reg: 0.9212  loss_rpn_cls: 0.2869  loss_rpn_loc: 0.2864    time: 0.2688  last_time: 0.3185  data_time: 0.0349  last_data_time: 0.0629   lr: 0.00016592  max_mem: 1915M
+[09/03 04:00:04 d2.utils.events]:  eta: 0:00:20  iter: 219  total_loss: 2.867  loss_cls: 1.346  loss_box_reg: 0.9433  loss_rpn_cls: 0.2806  loss_rpn_loc: 0.3028    time: 0.2691  last_time: 0.4195  data_time: 0.0494  last_data_time: 0.2051   lr: 0.00018257  max_mem: 1915M
+[09/03 04:00:10 d2.utils.events]:  eta: 0:00:15  iter: 239  total_loss: 2.839  loss_cls: 1.335  loss_box_reg: 0.9334  loss_rpn_cls: 0.253  loss_rpn_loc: 0.2894    time: 0.2691  last_time: 0.2297  data_time: 0.0388  last_data_time: 0.0006   lr: 0.00019922  max_mem: 1915M
+[09/03 04:00:15 d2.utils.events]:  eta: 0:00:10  iter: 259  total_loss: 2.861  loss_cls: 1.316  loss_box_reg: 0.9461  loss_rpn_cls: 0.291  loss_rpn_loc: 0.2957    time: 0.2693  last_time: 0.2235  data_time: 0.0449  last_data_time: 0.0007   lr: 0.00021587  max_mem: 1915M
+[09/03 04:00:21 d2.utils.events]:  eta: 0:00:05  iter: 279  total_loss: 2.735  loss_cls: 1.288  loss_box_reg: 0.9109  loss_rpn_cls: 0.2539  loss_rpn_loc: 0.287    time: 0.2695  last_time: 0.2322  data_time: 0.0468  last_data_time: 0.0026   lr: 0.00023252  max_mem: 1915M
+[09/03 04:00:26 d2.utils.events]:  eta: 0:00:00  iter: 299  total_loss: 2.728  loss_cls: 1.243  loss_box_reg: 0.9522  loss_rpn_cls: 0.243  loss_rpn_loc: 0.2894    time: 0.2690  last_time: 0.2381  data_time: 0.0323  last_data_time: 0.0041   lr: 0.00024917  max_mem: 1915M
+[09/03 04:00:26 d2.engine.hooks]: Overall training speed: 298 iterations in 0:01:20 (0.2690 s / it)
+[09/03 04:00:26 d2.engine.hooks]: Total training time: 0:01:20 (0:00:00 on hooks)
